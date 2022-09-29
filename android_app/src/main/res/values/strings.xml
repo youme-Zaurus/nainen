@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">android_app</string>
+    <string name="app_name">test</string>
+    <string name="backButton">戻る</string>
 </resources>
