@@ -8,15 +8,18 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_gravity="center_vertical"
         android:id="@+id/member" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:id="@+id/name"
         android:textSize="50sp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:id="@+id/backButton"
         android:text="@string/backButton" />
 
