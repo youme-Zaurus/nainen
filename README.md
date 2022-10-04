@@ -1,7 +1,7 @@
 # nainen
 
 ## 作業する際
-### **venvで開発を行う**
+### **Djangoをvenvで開発を行う**
 1. 作業ブランチにチェックアウト
 2. venvに入る
  > ```$ .\.venv\Scripts\activate``` (windows)
