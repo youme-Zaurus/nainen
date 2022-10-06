@@ -5,8 +5,8 @@ SECRET_KEY = ''
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'root',
-#         'USER': 'nainen',
+#         'NAME': 'nainen',
+#         'USER': 'root',
 #         'PASSWORD': 'Administr@t0r',
 #         # 'HOST': '127.0.0.1',
 #         # 'PORT': '5432',

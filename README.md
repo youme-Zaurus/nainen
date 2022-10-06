@@ -28,6 +28,12 @@
 これをコピーして、settings_local.pyの **SECRETT_KEY =** に貼り付ける
 5. 作業に入る
 
+### ローカルのDBを利用する間の手順
+※AWSを利用するようになったらここは必要なくなる
+1. ``django/config/settings_local.py`` に書いてある``DATABASES`` の ``NAME`` と ``PASSWORD`` を自分のローカルのPCの情報に書き換える
+2. DATABASESに沿って、ローカルのMySQLにデータベースにデータベースを作成  
+※作り方は各自で調べる
+
 *****
 
 ## Androidアプリ開発をする際の手順
