@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from .settings_local import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uax*+_=00)03)@t&h^sj+y#t@8u=z@o!xvkua^=kgk*m5i(xra'
+#SECRET_KEY = 'django-insecure-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,19 +80,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# 設定でき次第こちら：MySQL
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'root',
-#         'USER': 'nainen',
-#         'PASSWORD': 'Administr@t0r',
-        # 'HOST': '127.0.0.1',
-        # 'PORT': '5432',
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
