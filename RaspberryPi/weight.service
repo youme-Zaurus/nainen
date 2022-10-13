@@ -1,0 +1,8 @@
+[Unit]
+Description=Do weight
+
+[Service]
+ExecStart=/usr/bin/python /home/pi/hx711py/example.py
+
+[Install]
+WantedBy=multi-user.target
