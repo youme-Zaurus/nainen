@@ -19,7 +19,7 @@
 ### **Django開発時に行うこと(初回1回のみ)**
 1. ``settings_local_sample.pyファイル`` を ``django/config/`` にコピーする
 2. ``django/config/`` にある、``settings_local_sample.py`` を ``settings_local.py`` に名前を変更する
-3. nainenディレクトリで以下を実行  
+3. djangoディレクトリで以下を実行  
 ``$ python manage.py shell``
 4. 対話モードに移行するので、以下を実行  
 >``>>> from django.core.management.utils import get_random_secret_key``  
