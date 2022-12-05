@@ -1,19 +1,40 @@
 # nainen
 
-## 作業する際
-### **venvで開発を行う**
+## Django開発をする際
+### **Djangoをvenvで開発を行う**
 1. 作業ブランチにチェックアウト
 2. venvに入る
  > ```$ .\.venv\Scripts\activate``` (windows)
 
  > ```$ source .venv/bin/activate```(Linux・Mac)
-3. 作業
+3. 作業 ([以下を参考](#django開発一番始めに行うこと))
 4. 作業終了時  
  ```$ deactivate```
 ### パッケージのインストール
 > ```(.venv)$ pip install [package name]```
 
-※ その他pipコマンドは各自で調べながら作業してください
+※ その他pipコマンドは各自で調べながら作業してください  
+※ コミット、プッシュする際、.venvディレクトリはgitの追跡に**含めないでください**
+
+### **Django開発時に行うこと(初回1回のみ)**
+1. ``settings_local_sample.pyファイル`` を ``django/config/`` にコピーする
+2. ``django/config/`` にある、``settings_local_sample.py`` を ``settings_local.py`` に名前を変更する
+3. djangoディレクトリで以下を実行  
+``$ python manage.py shell``
+4. 対話モードに移行するので、以下を実行  
+>``>>> from django.core.management.utils import get_random_secret_key``  
+``>>> get_random_secret_key()``  
+'xxx-xxxx'  
+これをコピーして、settings_local.pyの **SECRETT_KEY =** に貼り付ける
+5. 作業に入る
+
+### ローカルのDBを利用する間の手順
+※AWSを利用するようになったらここは必要なくなる
+1. ``django/config/settings_local.py`` に書いてある``DATABASES`` の ``NAME`` と ``PASSWORD`` を自分のローカルのPCの情報に書き換える
+2. DATABASESに沿って、ローカルのMySQLにデータベースにデータベースを作成  
+※作り方は各自で調べる
+
+*****
 
 ## Androidアプリ開発をする際の手順
 ### **-  ローカルにandroid_appプロジェクトがない場合**
@@ -44,6 +65,10 @@
 3. 上の**ローカルにandroid_appプロジェクトがある場合**へ移動  
 
 </details>
+
+*****
+
+## iPhoneアプリを開発する際の手順
 
 *****
 ## コミットする際参考にしてください
