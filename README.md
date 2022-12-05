@@ -49,8 +49,10 @@
 ※もしupdateされたら、下の**androidブランチにupdateがあった際**を参考にして対応してください
 3. ローカルにある自分のAndroidStudioプロジェクトにブランチ内のファイルをコピペする  
 （他の人が開発したファイルで上書きする）  
-```nainen\android_app\src\```以下のファイルを、  
-```android_app\app\```以下にコピペする
+- ```nainen\android_app\src\```以下のファイルを、  
+```android_app\app\```以下にコピペする  
+- ```nainen\android_app\build.gradle```を、  
+```android_app\app\```以下にコピペする  
 4. 開発する
 5. android-xxx(画面や機能ごとにブランチ作成)ブランチにチェックアウト
 6. ローカルの```AndroidStudioProjects\android_app\app\```の```srcディレクトリ```を```nainen\android_app\```にコピペする
