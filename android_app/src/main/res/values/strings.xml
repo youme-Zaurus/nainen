@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">android_app</string>
+    <string name="top">Hello World!</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="login_button">ログイン</string>
+    <string name="register_button">新規登録</string>
 </resources>
