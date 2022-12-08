@@ -5,11 +5,11 @@ SECRET_KEY = ''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'nainen',
-        'USER': 'root',
-        'PASSWORD': 'Administr@t0r',
-        # 'HOST': '127.0.0.1',
-        # 'PORT': '5432',
+        'NAME': 'db-test',
+        'USER': 'admin',
+        'PASSWORD': 'KAMATA-k019c',
+        'HOST': 'db-test.ccva93nohvtb.ap-northeast-1.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
