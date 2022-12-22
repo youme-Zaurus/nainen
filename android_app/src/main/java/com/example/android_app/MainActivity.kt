@@ -1,10 +1,12 @@
 package com.example.android_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import com.example.android_app.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         override fun onClick(view: View) {
             if(view.id == R.id.login_button) {
                 Toast.makeText(applicationContext, "ログインボタン", Toast.LENGTH_SHORT).show()
+
+                // ログイン画面への遷移
+                val loginIntent = Intent(applicationContext, LoginActivity::class.java)
+                startActivity(loginIntent)
             }
             else if(view.id == R.id.register_button) {
                 Toast.makeText(applicationContext, "新規登録ボタン", Toast.LENGTH_SHORT).show()
