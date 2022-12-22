@@ -55,7 +55,10 @@
 ```android_app\app\```以下にコピペする  
 4. 開発する
 5. android-xxx(画面や機能ごとにブランチ作成)ブランチにチェックアウト
-6. ローカルの```AndroidStudioProjects\android_app\app\```の```srcディレクトリ```を```nainen\android_app\```にコピペする
+6. ローカルの、
+ - ```AndroidStudioProjects\android_app\app\```の```srcディレクトリ```
+ - ```AndroidStudioProjects\android_app\app\```の```build.gradle```を  
+ ```nainen\android_app\```にコピペする
 7. リモートのandroid-xxxブランチにプッシュする
 
 <details><summary>androidブランチにupdateがあった際</summary>
