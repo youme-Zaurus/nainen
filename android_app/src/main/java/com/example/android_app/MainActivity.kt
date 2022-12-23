@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity() {
     private inner class ClickListener: View.OnClickListener {
         override fun onClick(view: View) {
             if(view.id == R.id.login_button) {
-                Toast.makeText(applicationContext, "ログインボタン", Toast.LENGTH_SHORT).show()
-
                 // ログイン画面への遷移
                 val loginIntent = Intent(applicationContext, LoginActivity::class.java)
                 startActivity(loginIntent)
