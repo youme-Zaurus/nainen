@@ -1,5 +1,8 @@
 package com.example.android_app.data
 
+import android.content.Intent
+import androidx.core.content.ContextCompat.startActivity
+import com.example.android_app.MainActivity
 import com.example.android_app.data.model.LoggedInUser
 import java.io.IOException
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="zzz" parent="Widget.AppCompat.EditText">
+        <item name="android:padding">10dp</item>
+    </style>
     <!-- ボタン系 -->
     <style name="topButtonDesign" parent="Widget.MaterialComponents.Button">
         <item name="android:backgroundTint">@color/white</item>
@@ -10,8 +13,8 @@
     </style>
     <style name="mainButtonDesign" parent="Widget.MaterialComponents.Button">
         <item name="android:backgroundTint">@color/white</item>
-        <item name="android:paddingTop">15dp</item>
-        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
         <item name="strokeColor">@color/black</item>
         <item name="strokeWidth">1dp</item>
     </style>
@@ -36,8 +39,10 @@
     </style>
     <style name="mainButtonDesign.mainButtonText">
         <item name="android:layout_gravity">center</item>
+        <item name="android:paddingRight">40dp</item>
+        <item name="android:paddingLeft">40dp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">23sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 </resources>

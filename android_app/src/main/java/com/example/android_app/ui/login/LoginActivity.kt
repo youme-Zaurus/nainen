@@ -1,6 +1,7 @@
 package com.example.android_app.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -13,6 +14,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.android_app.HomeActivity
 import com.example.android_app.databinding.ActivityLoginBinding
 
 import com.example.android_app.R
@@ -114,6 +116,8 @@ class LoginActivity : AppCompatActivity() {
             "$welcome $displayName",
             Toast.LENGTH_LONG
         ).show()
+        val homeIntent = Intent(applicationContext, HomeActivity::class.java)
+        startActivity(homeIntent)
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
