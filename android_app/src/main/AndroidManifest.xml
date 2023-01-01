@@ -20,6 +20,7 @@
             android:label="@string/title_activity_login" />
         <activity
             android:name=".HomeActivity"
+            android:theme="@style/Theme.Android_app.ActionBarColor"
             android:exported="false"
             android:label="@string/title_activity_home" >
             <meta-data

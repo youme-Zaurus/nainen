@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="zzz" parent="Widget.AppCompat.EditText">
+    <style name="editTextDesign" parent="Widget.AppCompat.EditText">
         <item name="android:padding">10dp</item>
     </style>
     <!-- ボタン系 -->
