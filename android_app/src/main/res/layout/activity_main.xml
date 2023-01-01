@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginLeft="63dp"
+    android:layout_marginRight="63dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
 
-    <GridView
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/main_icon"
+        android:src="@drawable/icon_1" />
+
+    <!-- ・両幅の隙間を決めて、ボタンを親要素いっぱいにする <-now -->
+    <!-- ・ボタンの幅を指定する（250dp）-->
+    <Button
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/gridLook"
-        android:numColumns="3" />
-
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/login_button"
+        style="@style/topButtonDesign.topButtonText"
+        app:cornerRadius="20dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:id="@+id/register_button"
+        android:text="@string/register_button" />
 </LinearLayout>
