@@ -9,7 +9,7 @@ class RasPi(models.Model):
     in_use = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
-    deleted_at = models.DateTimeField(auto_now=True, auto_now_add=False, null=True)
+    deleted_at = models.DateTimeField(auto_now=False, auto_now_add=False, null=True)
 
     def __str__(self):
         return str(self.individual_id)
@@ -26,7 +26,7 @@ class User(models.Model):
     hash_password = models.CharField(max_length=254, verbose_name="パスワード")
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
-    deleted_at = models.DateTimeField(auto_now=True, auto_now_add=False, null=True)
+    deleted_at = models.DateTimeField(auto_now=False, auto_now_add=False, null=True)
 
     def __str__(self):
         return self.name
@@ -49,7 +49,7 @@ class UserBottle(models.Model):
     memo = models.TextField(null=True, blank=True,verbose_name='メモ')
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
-    deleted_at = models.DateTimeField(auto_now=True, auto_now_add=False, null=True)
+    deleted_at = models.DateTimeField(auto_now=False, auto_now_add=False, null=True)
 
     def __str__(self):
         return str(self.user_id) + "：" + self.name
@@ -63,7 +63,7 @@ class BottleType(models.Model):
     name = models.CharField(max_length=10, unique=True, verbose_name="ボトルの種類")
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
-    deleted_at = models.DateTimeField(auto_now=True, auto_now_add=False, null=True)
+    deleted_at = models.DateTimeField(auto_now=False, auto_now_add=False, null=True)
 
     def __str__(self):
         return str(self.name)
@@ -78,7 +78,7 @@ class Container(models.Model):
     name = models.CharField(max_length=10, unique=True, verbose_name="容器の種類")
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
-    deleted_at = models.DateTimeField(auto_now=True, auto_now_add=False, null=True)
+    deleted_at = models.DateTimeField(auto_now=False, auto_now_add=False, null=True)
     def __str__(self):
         return self.name
     
@@ -92,7 +92,7 @@ class ContainerImage(models.Model):
     container_image = models.CharField(max_length=30, verbose_name="画像のファイル名")
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
-    deleted_at = models.DateTimeField(auto_now=True, auto_now_add=False, null=True)
+    deleted_at = models.DateTimeField(auto_now=False, auto_now_add=False, null=True)
 
     def __str__(self):
         return str(self.container_id) + "：" +  str(self.quantity)
