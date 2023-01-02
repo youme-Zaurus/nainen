@@ -36,6 +36,15 @@ class UserBottleViewSet(viewsets.ModelViewSet):
         serializer.save(owner=request.user)
         return Response(serializer.data)
 
+    @action(detail=False, methods=['post'])
+    def update_quantity(self, request):
+        raspi = RasPi.objects.get(individual_id=request.data["raspi_id"])
+        user_bottle = UserBottle.objects.get(raspi_id_id=raspi.id)
+        serializer = UserBottleSerializer(user_bottle, data=request.data, partial=True)
+        serializer.is_valid()
+        serializer.save(owner=request.user)
+        return Response(serializer.data)
+
     # idとis_favoriteを渡す
     # @action(detail=False, methods=['post'])
     # def is_favorite(self, request):
@@ -100,6 +109,3 @@ class RasPiViewSet(viewsets.ModelViewSet):
     #     serializer.is_valid()
     #     serializer.save()
     #     return Response(serializer.data)
-
-
-

@@ -5,7 +5,7 @@ import uuid
 class RasPi(models.Model):
     id = models.BigAutoField(primary_key=True, editable=False)
     individual_id = models.PositiveSmallIntegerField(unique=True)
-    mac_address = models.PositiveBigIntegerField(unique=True)
+    mac_address = models.SlugField(max_length=17)
     in_use = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -99,5 +99,3 @@ class ContainerImage(models.Model):
     
     class Meta:
         verbose_name_plural = "容器画像"
-
-

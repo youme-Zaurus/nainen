@@ -68,6 +68,7 @@ class UserBottleSerializer(serializers.ModelSerializer):
         instance.product_name = validated_data.get('product_name', instance.product_name)
         instance.container_id = validated_data.get('container_id', instance.container_id)
         instance.bottle_volume = validated_data.get('bottle_volume', instance.bottle_volume)
+        instance.remaining_quantity = validated_data.get('remaining_quantity', instance.remaining_quantity)
         instance.is_favorite = validated_data.get('is_favorite', instance.is_favorite)
         instance.memo = validated_data.get('memo', instance.memo)
         instance.save()
