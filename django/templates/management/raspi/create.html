@@ -1,0 +1,6 @@
+<h1>ラズパイ登録</h1>
+<form action={% url 'raspi_store' %} method="POST">
+    {{ form.as_p }}
+    <button type='submit'>登録</button>
+    {% csrf_token %}
+</form>

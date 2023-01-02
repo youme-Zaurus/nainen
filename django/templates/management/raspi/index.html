@@ -1,0 +1,28 @@
+<h1>ラズパイ一覧</h1>
+
+<a href={% url 'raspi_create' %}>新規登録</a>
+
+<table border="1" style="border-collapse: collapse">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>識別ID</th>
+            <th>MACアドレス</th>
+            <th>作成日時</th>
+            <th>更新日時</th>
+            <th>削除日時</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for raspi in raspis %}
+            <tr>
+                <td>{{ raspi.id }}</td>
+                <td>{{ raspi.individual_id }}</td>
+                <td>{{ raspi.mac_address }}</td>
+                <td>{{ raspi.created_at }}</td>
+                <td>{{ raspi.updated_at }}</td>
+                <td>{{ raspi.deleted_at }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
