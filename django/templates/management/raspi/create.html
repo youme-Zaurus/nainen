@@ -1,6 +1,14 @@
 <h1>ラズパイ登録</h1>
 <form action={% url 'raspi_store' %} method="POST">
-    {{ form.as_p }}
+    {{ form.mac_address.label_tag }}
+    {{ form.mac_address }}
+    <br>
+    {{ form.in_use.label_tag }}
+    {% for radiobutton in form.in_use %}
+        {{ radiobutton }}
+    {% endfor %}
+    <br>
     <button type='submit'>登録</button>
+    <button type='button' onclick="history.back()">戻る</button>
     {% csrf_token %}
 </form>

@@ -8,6 +8,9 @@ from .forms import RasPiForm
 import random
 from django.shortcuts import redirect
 
+# 個別IDの桁数
+INDIVIDUAL_ID_LENGTH = 5
+
 def index(request):
     """
     ラズパイ一覧画面
@@ -34,8 +37,11 @@ def store(request):
     """
 
     # individual_id 生成
-    digit = 5 # 桁数
-    individual_id = random.randrange(10**(digit-1),10**digit)
+    judge = False
+    while(judge == False):
+        individual_id = create_individual_id()
+        if not RasPi.objects.filter(individual_id = individual_id).exists():
+            judge = True
 
     # RasPi データ作成
     raspi = RasPi(
@@ -46,3 +52,11 @@ def store(request):
     raspi.save()
 
     return redirect('raspi_index')
+
+def create_individual_id():
+    """
+    個別ID生成処理
+    """
+    digit = INDIVIDUAL_ID_LENGTH # 桁数
+    individual_id = random.randrange(10**(digit-1),10**digit)
+    return individual_id

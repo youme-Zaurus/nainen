@@ -6,8 +6,9 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>識別ID</th>
+            <th>個別ID</th>
             <th>MACアドレス</th>
+            <th>有効／無効</th>
             <th>作成日時</th>
             <th>更新日時</th>
             <th>削除日時</th>
@@ -19,9 +20,18 @@
                 <td>{{ raspi.id }}</td>
                 <td>{{ raspi.individual_id }}</td>
                 <td>{{ raspi.mac_address }}</td>
+                <td>
+                    {% if raspi.in_use == True %}
+                        ✔️
+                    {% endif %}
+                </td>
                 <td>{{ raspi.created_at }}</td>
                 <td>{{ raspi.updated_at }}</td>
-                <td>{{ raspi.deleted_at }}</td>
+                <td>
+                    {% if raspi.deleted_at is not None %}
+                        {{ raspi.deleted_at }}
+                    {% endif %}
+                </td>
             </tr>
         {% endfor %}
     </tbody>
