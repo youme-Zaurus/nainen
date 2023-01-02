@@ -4,7 +4,7 @@ import uuid
 # Create your models here.
 class RasPi(models.Model):
     id = models.BigAutoField(primary_key=True, editable=False)
-    individual_id = models.PositiveSmallIntegerField(unique=True)
+    individual_id = models.CharField(max_length=5, unique=True)
     mac_address = models.SlugField(max_length=17)
     in_use = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
